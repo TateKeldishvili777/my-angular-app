@@ -1,0 +1,6 @@
+
+<button (click)="getApiResponse()">Get JSON Response</button>
+<button (click)="deleteApiResponse()">Delete JSON Response</button>
+<div *ngIf="jsonResponse">
+  <pre>{{ jsonResponse | json }}</pre>
+</div>
