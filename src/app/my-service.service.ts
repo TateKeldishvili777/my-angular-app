@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class MyServiceService {
-  private apiUrl = 'http://localhost:8080/home/AllHomes'; // Replace with your API URL
+  private apiUrl = 'http://localhost:8080/home/allHomes'; // Replace with your API URL
 
   constructor(private http: HttpClient) {}
 
