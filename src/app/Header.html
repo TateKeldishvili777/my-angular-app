@@ -8,21 +8,27 @@
 <body>
 <header>
   <div class="mainText">
-  <a href="/">Main Page</a>
-  <a href="/" class="rent">Rent</a>
-  <a href="/" class="forSale">For sale</a>
+    <a href="/">Main Page</a>
+    <a href="/" class="rent">Rent</a>
+    <a href="/" class="forSale">For sale</a>
   </div>
-  <form action="" method="post" class="cityForm">
-    <label for="parameter">Select a Parameter:</label>
+  <div class="forms">
+
     <select id="parameter" name="parameter">
       <option value="Tbilisi">Tbilisi</option>
       <option value="Kutaisi">Kutaisi</option>
       <option value="Batumi">Batumi</option>
     </select>
-    <br><br>
+    <label for="actionParam"></label>
+    <select id="actionParam" name="actionParam" class="actionParam">
+      <option value="Rent">For rent</option>
+      <option value="Sale">For sale</option>
+      <option value="daily">Daily rent</option>
+    </select>
+
     <button type="submit">Submit</button>
-  </form>
-  <div >
+  </div>
+  <div>
     <form action="" method="post">
       <label for="homeName">Name:</label>
       <input type="text" id="homeName" name="homeName" required>
