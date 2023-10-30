@@ -11,28 +11,28 @@
     <a href="/">Main Page</a>
     <a href="/" class="rent">Rent</a>
     <a href="/" class="forSale">For sale</a>
+    <a href="/" class="authorization">Log in</a>
   </div>
   <div class="forms">
-
-    <select id="parameter" name="parameter">
-      <option value="Tbilisi">Tbilisi</option>
-      <option value="Kutaisi">Kutaisi</option>
-      <option value="Batumi">Batumi</option>
-    </select>
-    <label for="actionParam"></label>
-    <select id="actionParam" name="actionParam" class="actionParam">
-      <option value="Rent">For rent</option>
-      <option value="Sale">For sale</option>
-      <option value="daily">Daily rent</option>
-    </select>
-
-    <button type="submit">Submit</button>
+    <form name="searchForm" class="searchForm">
+      <select id="parameter" name="parameter">
+        <option value="Tbilisi">Tbilisi</option>
+        <option value="Kutaisi">Kutaisi</option>
+        <option value="Batumi">Batumi</option>
+      </select>
+      <label for="actionParam"></label>
+      <select id="actionParam" name="actionParam" class="actionParam">
+        <option value="Rent">For rent</option>
+        <option value="Sale">For sale</option>
+        <option value="daily">Daily rent</option>
+      </select>
+    </form>
   </div>
-  <div>
+  <button class="submitSearch" type="submit">Submit</button>
+  <div class="search">
     <form action="" method="post">
-      <label for="homeName">Name:</label>
       <input type="text" id="homeName" name="homeName" required>
-      <button type="submit">Submit</button>
+      <button type="submit" class="searchButton">Submit</button>
     </form>
   </div>
 </header>

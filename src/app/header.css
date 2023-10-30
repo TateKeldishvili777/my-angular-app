@@ -24,35 +24,30 @@ header a {
   align-items: center;
   justify-content: center;
 }
-
-/* Form input styles */
-.forms input[type="text"] {
-  width: 70%;
-  padding: 10px;
-  margin: 10px 0; /* Improved vertical spacing */
-  border: 1px solid #ddd; /* Light border */
-  border-radius: 4px;
-  display: inline-block;
+.searchForm{
+  width: 100%;
 }
 
 .forms select {
-  width: 40%;
+  width: 45%;
+  margin-left: 3.3%;
   padding: 10px;
-  margin-right: 1%;
   border: 1px solid #ddd; /* Light border */
   border-radius: 4px;
   display: inline-block;
+  text-align: center;
 }
 
-.forms button[type="submit"] {
-  background-color: #0074e4; /* Button background color matching the header */
-  color: #fff; /* Button text color */
+.submitSearch {
+  background-color: white; /* Button background color matching the header */
+  color: black; /* Button text color */
   padding: 10px 20px;
-  /*margin-left: 48%;*/
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  display: inline-block;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
 }
 
 .forms option {
@@ -63,7 +58,7 @@ header a {
   font-family: "Arial", sans-serif; /* Change the font family */
 }
 .mainText a {
-  margin-left: 20%;
+  margin-left: 15.5%;
   display: inline-block; /* Display as blocks to apply styles */
   padding: 10px 20px; /* Add padding for button size */
   text-align: center; /* Center text horizontally */
@@ -78,9 +73,24 @@ header a {
 .mainText a:hover {
   background-color: #005ea3; /* Change background color on hover */
 }
-/*.actionParam{*/
-/*  display: flex;*/
-/*}*/
-/*.cityForm{*/
-/*  display: flex;*/
-/*}*/
+.search{
+  display: flex;
+  justify-content: flex-end;
+}
+.search button{
+  background-color: white; /* Button background color matching the header */
+  color: black; /* Button text color */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+}
+input[type="text"] {
+  width: 60%; /* Adjust the width as needed */
+  padding: 7px;
+  border: 2px solid #0074e4;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+}
