@@ -12,6 +12,7 @@ export class ResponseComponent implements OnInit {
   userInput: string = '';
 
   city: string = '';
+  action: string = '';
   district: string = '';
   address: string = '';
   description: string = '';
@@ -39,7 +40,7 @@ export class ResponseComponent implements OnInit {
   }
 
   addInfo() {
-    this.apiService.addInfo(this.city, this.district, this.address, this.description).subscribe((data) => {
+    this.apiService.addInfo(this.city, this.action, this.district, this.address, this.description).subscribe((data) => {
       this.jsonResponse = data;
     });
   }

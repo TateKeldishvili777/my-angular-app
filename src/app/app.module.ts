@@ -7,11 +7,13 @@ import { AppComponent } from './app.component';
 import {ResponseComponent} from "./response/response.component";
 import { MyServiceService } from './my-service.service';
 import {FormsModule} from "@angular/forms";
+import {HeaderComponents} from "./header/header";
 
 @NgModule({
   declarations: [
     AppComponent,
-    ResponseComponent
+    ResponseComponent,
+    HeaderComponents
   ],
   imports: [
     BrowserModule,

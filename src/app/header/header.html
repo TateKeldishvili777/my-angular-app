@@ -15,20 +15,20 @@
   </div>
   <div class="forms">
     <form name="searchForm" class="searchForm">
-      <select id="parameter" name="parameter">
+      <select id="parameter" name="parameter" [(ngModel)]="city">
         <option value="Tbilisi">Tbilisi</option>
         <option value="Kutaisi">Kutaisi</option>
         <option value="Batumi">Batumi</option>
       </select>
       <label for="actionParam"></label>
-      <select id="actionParam" name="actionParam" class="actionParam">
+      <select id="actionParam" name="actionParam" class="actionParam" [(ngModel)]="action">
         <option value="Rent">For rent</option>
         <option value="Sale">For sale</option>
         <option value="daily">Daily rent</option>
       </select>
     </form>
   </div>
-  <button class="submitSearch" type="submit">Submit</button>
+  <button (click)="findByFilter()" class="submitSearch" type="submit">Submit</button>
   <div class="search">
     <form action="" method="post">
       <input type="text" id="homeName" name="homeName" required>
@@ -36,5 +36,8 @@
     </form>
   </div>
 </header>
+<div *ngIf="jsonResponse">
+  <pre>{{ jsonResponse | json }}</pre>
+</div>
 </body>
 </html>
