@@ -1,0 +1,96 @@
+/* Monochromatic header with different shades of blue */
+header {
+  background-color: #0074e4; /* Main color */
+  color: #fff; /* Light text color */
+}
+
+/* Lighter variation for the header text */
+header h1 {
+  color: #66a9ff;
+}
+
+/* Even lighter variation for links or buttons */
+header a {
+  color: #aaddff;
+}
+
+.forms {
+  margin: 10px;
+  padding: 20px;
+  background-color: #fff; /* White background for the form */
+  border: 1px solid #ddd; /* Light border */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.searchForm{
+  width: 100%;
+}
+
+.forms select {
+  width: 45%;
+  margin-left: 3.3%;
+  padding: 10px;
+  border: 1px solid #ddd; /* Light border */
+  border-radius: 4px;
+  display: inline-block;
+  text-align: center;
+}
+
+.submitSearch {
+  background-color: white; /* Button background color matching the header */
+  color: black; /* Button text color */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+
+.forms option {
+  display: inline-block;
+  text-align: center; /* Center the text horizontally */
+  line-height: 2; /* Adjust line height for vertical centering */
+  font-size: 18px; /* Increase text size */
+  font-family: "Arial", sans-serif; /* Change the font family */
+}
+.mainText a {
+  margin-left: 15.5%;
+  display: inline-block; /* Display as blocks to apply styles */
+  padding: 10px 20px; /* Add padding for button size */
+  text-align: center; /* Center text horizontally */
+  text-decoration: none; /* Remove default underline */
+  border: 2px solid #0074e4; /* Add border for button outline */
+  background-color: #0074e4; /* Background color for buttons */
+  color: #fff; /* Text color for buttons */
+  margin-right: 20px; /* Add margin between buttons */
+  border-radius: 5px; /* Rounded corners for buttons */
+}
+
+.mainText a:hover {
+  background-color: #005ea3; /* Change background color on hover */
+}
+.search{
+  display: flex;
+  justify-content: flex-end;
+}
+.search button{
+  background-color: white; /* Button background color matching the header */
+  color: black; /* Button text color */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+}
+input[type="text"] {
+  width: 60%; /* Adjust the width as needed */
+  padding: 7px;
+  border: 2px solid #0074e4;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+}
