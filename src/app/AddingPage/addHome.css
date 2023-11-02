@@ -1,16 +1,18 @@
-.ProductAddInfo{
+body {
   font-family: "Arial", sans-serif;
   font-size: 18px;
-  color: black; /* Button text color */
+}
+.ProductAddInfo{
+  color: black;
   text-align: center;
   line-height: 1.5;
 }
 
-/* Style for input fields with the "sameInputType" class */
+
 .sameInputType input[type="text"],
 .sameInputType input[type="number"] {
-  width: 30%;
-  padding: 10px;
+  width: 34%;
+  padding: 12px;
   margin: 5px 0;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -19,24 +21,15 @@
   display: inline-block;
 }
 
-.sameInputType h3{
-  display: inline;
-}
-
-/* Style for the "description" input field */
-.sameInputType .description {
-  width: 40%;
-  padding: 15px; /* Increase padding for better visibility */
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 18px;
-  outline: none;
-  resize: vertical; /* Allow vertical resizing */
+/* Style for the headings within "sameInputType" */
+.sameInputType label {
+  width: 25%;
   display: inline-block;
+  line-height: 1;
+  margin: 5px 0;
 }
 
-/* Style the submit button */
+
 button[type="submit"] {
   background-color: #007BFF;
   color: #fff;
