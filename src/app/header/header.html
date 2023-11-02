@@ -30,9 +30,9 @@
   </div>
   <button (click)="findByFilter()" class="submitSearch" type="submit">Submit</button>
   <div class="search">
-    <form action="" method="post">
-      <input type="text" id="homeName" name="homeName" required>
-      <button type="submit" class="searchButton">Submit</button>
+    <form method="post">
+      <input type="text" id="homeName" name="homeName" [(ngModel)]="name" required>
+      <button (click)="findByName()" type="submit"  class="searchButton">Submit</button>
     </form>
   </div>
 </header>

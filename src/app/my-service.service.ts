@@ -22,6 +22,11 @@ export class MyServiceService {
     return this.http.get(this.apiUrl.concat("findByFilter/").concat(city).concat("/").concat(action))
   }
 
+  findByName(name: string) {
+    console.log(this.http.get(this.apiUrl.concat("findByName/").concat(name)))
+    return this.http.get(this.apiUrl.concat("findByName/").concat(name))
+  }
+
   addInfo(city: string, action: string, district: string, address: string, description: string) {
 
     const headers = new HttpHeaders({

@@ -25,6 +25,7 @@ export class ResponseComponent implements OnInit {
     this.findById();
     this.addInfo();
     this.deleteAll();
+    this.findByName();
   }
 
   getApiResponse() {
@@ -35,6 +36,12 @@ export class ResponseComponent implements OnInit {
 
   findById() {
     this.apiService.findById(this.userInput).subscribe((data) => {
+      this.jsonResponse = data;
+    });
+  }
+
+  findByName() {
+    this.apiService.findByName(this.userInput).subscribe((data) => {
       this.jsonResponse = data;
     });
   }

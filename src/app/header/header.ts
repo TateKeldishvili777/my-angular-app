@@ -12,6 +12,7 @@ export class HeaderComponents implements OnInit {
 
   city: string = '';
   action: string = '';
+  name: string = '';
 
   constructor(private apiService: MyServiceService) {
   }
@@ -26,4 +27,9 @@ export class HeaderComponents implements OnInit {
     });
   }
 
+  findByName() {
+    this.apiService.findByName(this.name).subscribe((data) => {
+      this.jsonResponse = data;
+    });
+  }
 }
