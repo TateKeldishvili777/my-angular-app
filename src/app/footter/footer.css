@@ -1,4 +1,4 @@
-.footter {
+.footer {
   background-color: #0074e4;
   color: #fff;
   position: fixed;
@@ -13,7 +13,7 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
 }
 
-.footter h1 {
+.footer h1 {
   background-color: #0071c5;
   width: 10%;
   display: inline-block;
@@ -21,7 +21,7 @@
   border: 1px solid #000080; /* Light border */
 
 }
-.footter h2{
+.footer h2{
   background-color: #0071c5;
   width: 13%;
   display: inline-block;

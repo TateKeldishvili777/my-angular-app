@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-angular-app';
+
+  addHomePage: boolean = false;
+  homePage: boolean = true;
+
+  showAddHomePage() {
+    this.addHomePage = !this.addHomePage;
+    this.homePage = !this.homePage;
+  }
 }

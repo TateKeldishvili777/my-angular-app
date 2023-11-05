@@ -23,11 +23,10 @@ export class MyServiceService {
   }
 
   findByName(name: string) {
-    console.log(this.http.get(this.apiUrl.concat("findByName/").concat(name)))
     return this.http.get(this.apiUrl.concat("findByName/").concat(name))
   }
 
-  addInfo(city: string, action: string, district: string, address: string, description: string) {
+  addInfo(city: string, action: string, district: string, address: string, description: string, price: string, currency: string, title: string) {
 
     const headers = new HttpHeaders({
       'Content-Type': 'application/json'
@@ -38,7 +37,10 @@ export class MyServiceService {
       action: action,
       district: district,
       address: address,
-      description: description
+      description: description,
+      price: price,
+      currency: currency,
+      title: title
     };
 
     return this.http.post(this.apiUrl.concat("add"), data, {headers});

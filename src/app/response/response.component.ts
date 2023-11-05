@@ -23,9 +23,8 @@ export class ResponseComponent implements OnInit {
   ngOnInit(): void {
     this.getApiResponse();
     this.findById();
-    this.addInfo();
+    // this.addInfo();
     this.deleteAll();
-    this.findByName();
   }
 
   getApiResponse() {
@@ -40,17 +39,11 @@ export class ResponseComponent implements OnInit {
     });
   }
 
-  findByName() {
-    this.apiService.findByName(this.userInput).subscribe((data) => {
-      this.jsonResponse = data;
-    });
-  }
-
-  addInfo() {
-    this.apiService.addInfo(this.city, this.action, this.district, this.address, this.description).subscribe((data) => {
-      this.jsonResponse = data;
-    });
-  }
+  // addInfo() {
+  //   this.apiService.addInfo(this.city, this.action, this.district, this.address, this.description).subscribe((data) => {
+  //     this.jsonResponse = data;
+  //   });
+  // }
 
   deleteAll() {
     this.apiService.deleteAll().subscribe((data) => {
