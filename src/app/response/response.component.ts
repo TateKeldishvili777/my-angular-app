@@ -21,10 +21,10 @@ export class ResponseComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.getApiResponse();
-    this.findById();
+    // this.getApiResponse();
+    // this.findById();
     // this.addInfo();
-    this.deleteAll();
+    // this.deleteAll();
   }
 
   getApiResponse() {
