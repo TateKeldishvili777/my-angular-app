@@ -19,19 +19,20 @@ export class ResponseComponent implements OnInit {
 
   constructor(private apiService: MyServiceService) {
   }
-
-  ngOnInit(): void {
-    // this.getApiResponse();
-    // this.findById();
-    // this.addInfo();
-    // this.deleteAll();
-  }
-
   getApiResponse() {
     this.apiService.getApiResponse().subscribe((data) => {
       this.jsonResponse = data;
     });
   }
+
+  ngOnInit(): void {
+     this.getApiResponse();
+    // this.findById();
+    // this.addInfo();
+    // this.deleteAll();
+  }
+
+
 
   findById() {
     this.apiService.findById(this.userInput).subscribe((data) => {
