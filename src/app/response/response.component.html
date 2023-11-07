@@ -1,21 +1,8 @@
 <div>
   <button (click)="getApiResponse()">Get JSON Response</button>
 </div>
-<!--<div>-->
-<!--  <input type="text" [(ngModel)]="userInput">-->
-<!--  <button (click)="findById()">Fin by id</button>-->
-<!--</div>-->
-<!--<div>-->
-<!--  <input type="text" [(ngModel)]="city">-->
-<!--  <input type="text" [(ngModel)]="action">-->
-<!--  <input type="text" [(ngModel)]="district">-->
-<!--  <input type="text" [(ngModel)]="address">-->
-<!--  <input type="text" [(ngModel)]="description">-->
-<!--&lt;!&ndash;  <button (click)="addInfo()">Add user</button>&ndash;&gt;-->
-<!--</div>-->
+
 <div class="homes" *ngIf="jsonResponse">
   <pre>{{ jsonResponse | json }}</pre>
 </div>
-<!--<div>-->
-<!--  <button (click)="deleteAll()">Delete All Data !!!</button>-->
-<!--</div>-->
+
