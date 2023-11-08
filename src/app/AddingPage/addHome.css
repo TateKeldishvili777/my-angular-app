@@ -10,7 +10,8 @@ body {
 
 
 .sameInputType input[type="text"],
-.sameInputType input[type="number"] {
+.sameInputType input[type="number"]
+{
   width: 34%;
   padding: 12px;
   margin: 5px 0;
@@ -20,10 +21,19 @@ body {
   outline: none;
   display: inline-block;
 }
-
+.sameInputType select{
+  width: 35%;
+  padding: 12px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+  display: inline-block;
+}
 /* Style for the headings within "sameInputType" */
 .sameInputType label {
-  width: 16%;
+  width: 20%;
   display: inline-block;
   line-height: 1;
   margin: 5px 0;

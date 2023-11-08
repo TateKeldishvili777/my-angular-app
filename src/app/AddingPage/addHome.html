@@ -27,8 +27,12 @@
       <label for="currency">Please enter currency here:</label>
       <input type="text" id="currency" [(ngModel)]="currency" [ngModelOptions]="{standalone: true}"><br>
 
-      <label for="action">Please enter action here:</label>
-      <input type="text" id="action" [(ngModel)]="action" [ngModelOptions]="{standalone: true}"><br>
+      <label for="action">Choose an action:</label>
+      <select name="action" id="action" [(ngModel)]="action" [ngModelOptions]="{standalone: true}">
+        <option value="Rent">For Rent</option>
+        <option value="Sale">For Sale</option>
+        <option value="daily">Daily rent</option>
+      </select> <br>
 
       <label for="district">Please enter district here:</label>
       <input type="text" id="district" [(ngModel)]="district" [ngModelOptions]="{standalone: true}"><br>
