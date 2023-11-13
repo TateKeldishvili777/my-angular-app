@@ -57,7 +57,7 @@ header a {
   font-size: 18px; /* Increase text size */
   font-family: "Arial", sans-serif; /* Change the font family */
 }
-.mainText a {
+.mainText button {
   margin-left: 15.5%;
   display: inline-block; /* Display as blocks to apply styles */
   padding: 10px 20px; /* Add padding for button size */
@@ -70,7 +70,7 @@ header a {
   border-radius: 5px; /* Rounded corners for buttons */
 }
 
-.mainText a:hover {
+.mainText button:hover {
   background-color: #005ea3; /* Change background color on hover */
 }
 .search{
