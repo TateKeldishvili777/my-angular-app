@@ -1,5 +1,7 @@
+import {Router} from '@angular/router';
 import {Component, OnInit} from '@angular/core';
 import {MyServiceService} from "../my-service.service";
+
 
 @Component({
   selector: 'header-area',
@@ -14,11 +16,14 @@ export class HeaderComponents implements OnInit {
   action: string = '';
   name: string = '';
 
-  constructor(private apiService: MyServiceService) {
+  constructor(private apiService: MyServiceService, private router: Router) {
   }
 
   ngOnInit(): void {
-    this.findByFilter()
+  }
+
+  navigateToMainPage() {
+    this.router.navigateByUrl('/');
   }
 
   findByFilter() {
