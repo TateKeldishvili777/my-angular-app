@@ -46,6 +46,19 @@ export class MyServiceService {
     return this.http.post(this.apiUrl.concat("add"), data, {headers});
   }
 
+  logIn(username: string, password: string) {
+
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json'
+    });
+
+    const data = {
+      username: username,
+      password: password,
+    };
+
+    return this.http.post(this.apiUrl.concat("add"), data, {headers});
+  }
   deleteAll() {
     return this.http.delete(this.apiUrl.concat("deleteAll"))
   }

@@ -10,6 +10,7 @@ import {FormsModule} from "@angular/forms";
 import {HeaderComponents} from "./header/header";
 import {FooterComponents} from "./footter/footer";
 import {NewHomeComponents} from "./AddingPage/addHome";
+import {AuthorizationPage} from "./authorizationPage/AuthorizationPage";
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import {NewHomeComponents} from "./AddingPage/addHome";
     ResponseComponent,
     HeaderComponents,
     FooterComponents,
-    NewHomeComponents
+    NewHomeComponents,
+    AuthorizationPage
   ],
   imports: [
     BrowserModule,
