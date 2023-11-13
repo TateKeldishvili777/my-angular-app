@@ -4,7 +4,7 @@
   <button (click)="showAddHomePage()">Add Home</button>
 </div>
 <div *ngIf="addHomePage">
-  <button (click)="showAddHomePage()">Back</button>
+  <button (click)="backToMainPage()">Back</button>
 </div>
 <app-response *ngIf="homePage"></app-response>
 <add-home *ngIf="addHomePage"></add-home>

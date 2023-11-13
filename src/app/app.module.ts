@@ -10,7 +10,12 @@ import {FormsModule} from "@angular/forms";
 import {HeaderComponents} from "./header/header";
 import {FooterComponents} from "./footter/footer";
 import {NewHomeComponents} from "./AddingPage/addHome";
+import {RouterModule, Routes} from "@angular/router";
 
+
+const routes: Routes = [
+  { path: 'newHome', component: NewHomeComponents },
+];
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +28,8 @@ import {NewHomeComponents} from "./AddingPage/addHome";
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [MyServiceService],
   bootstrap: [AppComponent]
