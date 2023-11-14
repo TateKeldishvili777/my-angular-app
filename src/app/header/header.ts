@@ -32,6 +32,12 @@ export class HeaderComponents implements OnInit {
     });
   }
 
+  findByAction(action: string) {
+    this.apiService.findByAction(action).subscribe((data) => {
+      this.jsonResponse = data;
+    });
+  }
+
   findByName() {
     this.apiService.findByName(this.name).subscribe((data) => {
       this.jsonResponse = data;

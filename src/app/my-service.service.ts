@@ -21,7 +21,9 @@ export class MyServiceService {
   findByFilter(city: string, action: string) {
     return this.http.get(this.apiUrl.concat("findByFilter/").concat(city).concat("/").concat(action))
   }
-
+  findByAction(action: string) {
+    return this.http.get(this.apiUrl.concat("findByAction/").concat(action))
+  }
   findByName(name: string) {
     return this.http.get(this.apiUrl.concat("findByName/").concat(name))
   }
