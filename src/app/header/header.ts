@@ -1,6 +1,7 @@
 import {Router} from '@angular/router';
 import {Component, OnInit} from '@angular/core';
 import {MyServiceService} from "../my-service.service";
+import {jsonResponse} from "../response/response.component";
 
 
 @Component({
@@ -9,8 +10,6 @@ import {MyServiceService} from "../my-service.service";
   styleUrls: ['./header.css']
 })
 export class HeaderComponents implements OnInit {
-
-  jsonResponse: any;
 
   city: string = '';
   action: string = '';
@@ -24,23 +23,26 @@ export class HeaderComponents implements OnInit {
 
   navigateToMainPage() {
     this.router.navigateByUrl('/');
+    this.apiService.getApiResponse().subscribe((data) => {
+      jsonResponse.key = data;
+    });
   }
 
   findByFilter() {
     this.apiService.findByFilter(this.city, this.action).subscribe((data) => {
-      this.jsonResponse = data;
+      jsonResponse.key = data;
     });
   }
 
   findByAction(action: string) {
     this.apiService.findByAction(action).subscribe((data) => {
-      this.jsonResponse = data;
+      jsonResponse.key = data;
     });
   }
 
   findByName() {
     this.apiService.findByName(this.name).subscribe((data) => {
-      this.jsonResponse = data;
+      jsonResponse.key = data;
     });
   }
 }
