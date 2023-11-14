@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {MyServiceService} from "../my-service.service";
-import {Router} from "@angular/router";
+
 
 @Component({
   selector: 'add-home',
@@ -8,7 +8,7 @@ import {Router} from "@angular/router";
   styleUrls: ['./addHome.css']
 })
 export class NewHomeComponents implements OnInit {
-  constructor(private apiService: MyServiceService,private router: Router) {
+  constructor(private apiService: MyServiceService) {
   }
 
   jsonResponse: any;
@@ -31,6 +31,5 @@ export class NewHomeComponents implements OnInit {
     this.apiService.addInfo(this.city, this.action, this.district, this.address, this.description, this.price, this.currency, this.title).subscribe((data) => {
       this.jsonResponse = data;
     });
-    this.router.navigate([this.router.url]); // Change '/' to the actual route of your homepage
   }
 }
