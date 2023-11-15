@@ -13,6 +13,9 @@
   </p>
 </div>
 <div class="adding">
+  <div *ngIf="!isFormValid" class="validation-error">
+    Please fill in all parameters.
+  </div>
   <form name="addingForm" class="addingForm">
     <div class="sameInputType">
       <label for="title">Please enter title here:</label>
@@ -48,7 +51,7 @@
              [ngModelOptions]="{standalone: true}">
     </div>
 
-    <button type="submit" (click)="addInfo()">Submit</button>
+    <button type="submit" (click)="addInfo()" [disabled]="!isFormValid">Submit</button>
   </form>
 </div>
 </body>
