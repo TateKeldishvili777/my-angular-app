@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {MyServiceService} from "./my-service.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-root',
@@ -11,8 +13,17 @@ export class AppComponent {
   addHomePage: boolean = false;
   homePage: boolean = true;
 
+  constructor(private apiService: MyServiceService, private router: Router) {
+  }
+
   showAddHomePage() {
     this.addHomePage = !this.addHomePage;
     this.homePage = !this.homePage;
+    this.router.navigate(['/newHome']);
+  }
+  backToMainPage() {
+    this.addHomePage = !this.addHomePage;
+    this.homePage = !this.homePage;
+    this.router.navigate(['/']);
   }
 }

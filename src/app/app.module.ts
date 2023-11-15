@@ -10,8 +10,12 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HeaderComponents} from "./header/header";
 import {FooterComponents} from "./footter/footer";
 import {NewHomeComponents} from "./AddingPage/addHome";
-import {AuthorizationPage} from "./authorizationPage/AuthorizationPage";
+import {RouterModule, Routes} from "@angular/router";
 
+
+const routes: Routes = [
+  { path: 'newHome', component: NewHomeComponents },
+];
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +30,8 @@ import {AuthorizationPage} from "./authorizationPage/AuthorizationPage";
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [MyServiceService],
   bootstrap: [AppComponent]
