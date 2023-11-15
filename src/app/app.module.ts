@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {ResponseComponent} from "./response/response.component";
 import { MyServiceService } from './my-service.service';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HeaderComponents} from "./header/header";
 import {FooterComponents} from "./footter/footer";
 import {NewHomeComponents} from "./AddingPage/addHome";
@@ -25,7 +25,8 @@ import {AuthorizationPage} from "./authorizationPage/AuthorizationPage";
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [MyServiceService],
   bootstrap: [AppComponent]

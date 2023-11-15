@@ -28,24 +28,14 @@ export class MyServiceService {
     return this.http.get(this.apiUrl.concat("findByName/").concat(name))
   }
 
-  addInfo(city: string, action: string, district: string, address: string, description: string, price: string, currency: string, title: string) {
+  addInfo(formValues:JSON) {
 
     const headers = new HttpHeaders({
       'Content-Type': 'application/json'
     });
 
-    const data = {
-      city: city,
-      action: action,
-      district: district,
-      address: address,
-      description: description,
-      price: price,
-      currency: currency,
-      title: title
-    };
 
-    return this.http.post(this.apiUrl.concat("add"), data, {headers});
+     this.http.post(this.apiUrl.concat("add"), formValues, {headers}).subscribe();
   }
 
   logIn(username: string, password: string) {

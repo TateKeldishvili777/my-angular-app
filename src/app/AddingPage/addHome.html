@@ -13,45 +13,44 @@
   </p>
 </div>
 <div class="adding">
-  <div *ngIf="!isFormValid" class="validation-error">
+  <div *ngIf="disabled=='on'"  class="validation-error">
     Please fill in all parameters.
   </div>
-  <form name="addingForm" class="addingForm">
+  <form name="addingForm" class="addingForm" [formGroup]="addingForm">
     <div class="sameInputType">
       <label for="title">Please enter title here:</label>
-      <input type="text" id="title" [(ngModel)]="title" [ngModelOptions]="{standalone: true}"><br>
+      <input  type="text" id="title" formControlName="title"><br>
 
-      <label for="city">Please enter city here:</label>
-      <input type="text" id="city" [(ngModel)]="city" [ngModelOptions]="{standalone: true}"><br>
+      <label for="city">City:</label>
+      <input type="text" id="city" formControlName="city" /><br>
 
       <label for="price">Please enter price here:</label>
-      <input type="number" id="price" [(ngModel)]="price" [ngModelOptions]="{standalone: true}"><br>
+      <input type="number" id="price" formControlName="price" ><br>
 
       <label for="currency">Please enter currency here:</label>
-      <select name="currency" id="currency" [(ngModel)]="currency" [ngModelOptions]="{standalone: true}">
+      <select name="currency" id="currency" formControlName="currency" >
         <option value="GEL">GEL</option>
         <option value="USD">USD</option>
       </select> <br>
 
       <label for="action">Choose an action:</label>
-      <select name="action" id="action" [(ngModel)]="action" [ngModelOptions]="{standalone: true}">
+      <select name="action" id="action" formControlName="action" >
         <option value="Rent">For Rent</option>
         <option value="Sale">For Sale</option>
         <option value="daily">Daily rent</option>
       </select> <br>
 
       <label for="district">Please enter district here:</label>
-      <input type="text" id="district" [(ngModel)]="district" [ngModelOptions]="{standalone: true}"><br>
+      <input type="text" id="district" formControlName="district"><br>
 
       <label for="address">Please enter address here:</label>
-      <input type="text" id="address" [(ngModel)]="address" [ngModelOptions]="{standalone: true}"><br>
+      <input type="text" id="address" formControlName="address"><br>
 
       <label for="description">Please enter description here:</label>
-      <input class="description" type="text" id="description" [(ngModel)]="description"
-             [ngModelOptions]="{standalone: true}">
+      <input class="description" type="text" id="description" formControlName="description">
     </div>
 
-    <button type="submit" (click)="addInfo()" [disabled]="!isFormValid">Submit</button>
+    <button type="submit" (click)="addInfo()"  >Submit</button>
   </form>
 </div>
 </body>
