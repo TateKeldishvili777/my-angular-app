@@ -11,6 +11,7 @@ import {HeaderComponents} from "./header/header";
 import {FooterComponents} from "./footter/footer";
 import {NewHomeComponents} from "./AddingPage/addHome";
 import {RouterModule, Routes} from "@angular/router";
+import {AuthorizationPage} from "./authorizationPage/AuthorizationPage";
 
 
 const routes: Routes = [
@@ -22,7 +23,8 @@ const routes: Routes = [
     ResponseComponent,
     HeaderComponents,
     FooterComponents,
-    NewHomeComponents
+    NewHomeComponents,
+    AuthorizationPage
   ],
   imports: [
     BrowserModule,

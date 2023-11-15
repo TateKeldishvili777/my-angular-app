@@ -18,7 +18,7 @@ export class AuthorizationPage implements OnInit {
 
 
   ngOnInit(): void {
-    this.logIn()
+
   }
 
   logIn() {
