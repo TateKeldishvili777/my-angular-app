@@ -1,13 +1,14 @@
 import {Component, OnInit} from '@angular/core';
 import {MyServiceService} from "../my-service.service";
 
+export const jsonResponse: { key: any } = { key: '' };
+
 @Component({
   selector: 'app-response',
   templateUrl: './response.component.html',
   styleUrls: ['./response.component.css']
 })
 export class ResponseComponent implements OnInit {
-  jsonResponse: any;
 
   userInput: string = '';
 
@@ -21,7 +22,7 @@ export class ResponseComponent implements OnInit {
   }
   getApiResponse() {
     this.apiService.getApiResponse().subscribe((data) => {
-      this.jsonResponse = data;
+      jsonResponse.key = data;
     });
   }
 
@@ -36,7 +37,7 @@ export class ResponseComponent implements OnInit {
 
   findById() {
     this.apiService.findById(this.userInput).subscribe((data) => {
-      this.jsonResponse = data;
+      jsonResponse.key = data;
     });
   }
 
@@ -48,7 +49,9 @@ export class ResponseComponent implements OnInit {
 
   deleteAll() {
     this.apiService.deleteAll().subscribe((data) => {
-      this.jsonResponse = data;
+      jsonResponse.key = data;
     });
   }
+
+  protected readonly jsonResponse = jsonResponse;
 }
