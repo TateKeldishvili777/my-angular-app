@@ -1,11 +1,17 @@
 import {Component, OnInit} from '@angular/core';
 import {MyServiceService} from "../my-service.service";
+import {JsonPipe, NgIf} from "@angular/common";
 
 export const jsonResponse: { key: any } = { key: '' };
 
 @Component({
   selector: 'app-response',
   templateUrl: './response.component.html',
+  standalone: true,
+  imports: [
+    JsonPipe,
+    NgIf
+  ],
   styleUrls: ['./response.component.css']
 })
 export class ResponseComponent implements OnInit {

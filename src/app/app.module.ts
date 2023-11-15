@@ -1,32 +1,25 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {HttpClientModule} from '@angular/common/http';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import {ResponseComponent} from "./response/response.component";
-import { MyServiceService } from './my-service.service';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
+import {MyServiceService} from './my-service.service';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import {HeaderComponents} from "./header/header";
-import {FooterComponents} from "./footter/footer";
 import {NewHomeComponents} from "./AddingPage/addHome";
 import {RouterModule, Routes} from "@angular/router";
 import {AuthorizationPage} from "./authorizationPage/AuthorizationPage";
 
-
 const routes: Routes = [
-  { path: 'newHome', component: NewHomeComponents },
+  {path: 'newHome', component: NewHomeComponents},
 ];
+
 @NgModule({
   declarations: [
-    AppComponent,
-    ResponseComponent,
-    HeaderComponents,
-    FooterComponents,
-    NewHomeComponents,
-    AuthorizationPage
+
   ],
   imports: [
+    AuthorizationPage,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
@@ -37,4 +30,5 @@ const routes: Routes = [
   providers: [MyServiceService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

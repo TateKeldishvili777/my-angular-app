@@ -1,12 +1,1 @@
-<header-area *ngIf="homePage"></header-area>
-<div class="container">
-  <div *ngIf="homePage">
-    <button (click)="showAddHomePage()">Add Home</button>
-  </div>
-  <div *ngIf="addHomePage">
-    <button (click)="backToMainPage()">Back</button>
-  </div>
-  <app-response *ngIf="homePage"></app-response>
-  <add-home *ngIf="addHomePage"></add-home>
-</div>
-<footer-area *ngIf="homePage"></footer-area>
+<router-outlet></router-outlet>

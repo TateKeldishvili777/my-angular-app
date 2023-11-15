@@ -2,11 +2,16 @@ import {Router} from '@angular/router';
 import {Component, OnInit} from '@angular/core';
 import {MyServiceService} from "../my-service.service";
 import {jsonResponse} from "../response/response.component";
+import {FormsModule} from "@angular/forms";
 
 
 @Component({
   selector: 'header-area',
   templateUrl: './header.html',
+  standalone: true,
+  imports: [
+    FormsModule
+  ],
   styleUrls: ['./header.css']
 })
 export class HeaderComponents implements OnInit {

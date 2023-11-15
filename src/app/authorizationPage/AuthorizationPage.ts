@@ -5,7 +5,8 @@ import {MyServiceService} from "../my-service.service";
 @Component({
   selector: 'authorization',
   templateUrl: './AuthorizationPage.html',
-  styleUrls: ['./AuthorizationPage.css']
+  styleUrls: ['./AuthorizationPage.css'],
+  standalone: true,
 })
 export class AuthorizationPage implements OnInit {
   constructor(private apiService: MyServiceService ) {

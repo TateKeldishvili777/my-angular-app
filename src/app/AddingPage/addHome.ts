@@ -1,11 +1,19 @@
 import {Component, OnInit} from '@angular/core';
 import {MyServiceService} from "../my-service.service";
-import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
+import {NgIf} from "@angular/common";
+import {RouterLink} from "@angular/router";
 
 
 @Component({
   selector: 'add-home',
+  standalone: true,
   templateUrl: './addHome.html',
+  imports: [
+    ReactiveFormsModule,
+    RouterLink,
+    NgIf
+  ],
   styleUrls: ['./addHome.css']
 })
 export class NewHomeComponents implements OnInit {
