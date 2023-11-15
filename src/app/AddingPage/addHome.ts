@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {MyServiceService} from "../my-service.service";
 import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
 import {NgIf} from "@angular/common";
-import {RouterLink} from "@angular/router";
+import {Router, RouterLink} from "@angular/router";
 
 
 @Component({
@@ -20,7 +20,7 @@ export class NewHomeComponents implements OnInit {
   addingForm: FormGroup;
   disabled: "on" | "of" = "of";
 
-  constructor(private apiService: MyServiceService, private fb: FormBuilder) {
+  constructor(private apiService: MyServiceService, private fb: FormBuilder, private router: Router) {
     this.addingForm = this.fb.group({
       title: ['', Validators.required],
       city: ['', Validators.required],
@@ -55,6 +55,7 @@ export class NewHomeComponents implements OnInit {
       const formValues = this.addingForm.value;
       console.log(formValues as JSON)
       this.apiService.addInfo(formValues);
+      // this.router.navigateByUrl('/').then(r => true)
     } else {
       this.disabled = "on";
     }
