@@ -11,16 +11,20 @@
 }
 
 .footer h1 {
-  background-color: #0071c5;
-  width: 10%;
+  font-size: 1.3em;
+  background-color: #000000 ;
+  width: 6%;
+  height: 3%;
   display: inline-block;
   text-align: center;
   border: 1px solid #000080; /* Light border */
 
 }
-.footer h2{
-  background-color: #0071c5;
-  width: 13%;
+.footer h2, h3{
+  background-color: #000000 ;
+  width: 25%;
+  font-size: 1.1em;
+  font-family: "Arial", sans-serif;
   display: inline-block;
   text-align: center;
 

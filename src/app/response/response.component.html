@@ -1,7 +1,3 @@
-<div>
-  <button (click)="getApiResponse()">Get JSON Response</button>
-</div>
-
 <div class="homes" *ngIf="jsonResponse.key">
   <pre>{{ jsonResponse.key | json }}</pre>
 </div>
