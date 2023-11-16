@@ -3,7 +3,7 @@
     <button (click)="navigateToMainPage()">Main Page</button>
     <button value="Rent" class="rent" (click)="findByAction('Rent')">Rent</button>
     <button value="Sale" class="forSale" (click)="findByAction('Sale') " >For sale</button>
-    <button class="authorization">Log in</button>
+    <a [routerLink]="['/logIn']" ><button class="authorization">Log in</button></a>
   </div>
   <div class="forms">
     <form name="searchForm" class="searchForm">

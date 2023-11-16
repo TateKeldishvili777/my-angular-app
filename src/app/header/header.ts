@@ -1,4 +1,4 @@
-import {Router} from '@angular/router';
+import {Router, RouterLink} from '@angular/router';
 import {Component, OnInit} from '@angular/core';
 import {MyServiceService} from "../my-service.service";
 import {jsonResponse} from "../response/response.component";
@@ -10,7 +10,8 @@ import {FormsModule} from "@angular/forms";
   templateUrl: './header.html',
   standalone: true,
   imports: [
-    FormsModule
+    FormsModule,
+    RouterLink
   ],
   styleUrls: ['./header.css']
 })

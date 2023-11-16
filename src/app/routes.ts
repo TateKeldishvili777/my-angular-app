@@ -1,6 +1,7 @@
 import {Routes} from "@angular/router";
 import {NewHomeComponents} from "./AddingPage/addHome";
 import {HomePage} from "./HomePage/homePage";
+import {AuthorizationPage} from "./authorizationPage/AuthorizationPage";
 
 const routeConfig: Routes = [
   {
@@ -12,6 +13,11 @@ const routeConfig: Routes = [
     path: 'new-home',
     component: NewHomeComponents,
     title: 'New Home'
+  },
+  {
+    path: 'logIn',
+    component: AuthorizationPage,
+    title: 'Log in'
   }
 ];
 
